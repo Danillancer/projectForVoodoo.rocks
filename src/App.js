@@ -36,13 +36,7 @@ function App() {
     }
   };
 
-// const filterPosts=(e)=>{
-//   if(e.key === 'Enter' && query.trim() !== ''){
-//    setPosts([...posts.filter(p=>{p.userId.includes(query)})])
-   
-//   }
-  
-// }
+
   
   return (
     <div>
@@ -56,7 +50,7 @@ function App() {
                 className="materialize-textarea"
                 onChange={(e) => {setQuery(e.target.value)}}
                 value={query}
-                // onKeyPress={filterPosts}
+               
                 placeholder="Filter by author"
               />
             </i>
