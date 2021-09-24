@@ -9,9 +9,9 @@ function App() {
   
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts`)
+      .get(`https://jsonplaceholder.typicode.com/posts?userId=${query}`)
       .then((res) => setPosts(res.data));
-  }, []);
+  }, [query]);
 
 
   
