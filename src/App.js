@@ -8,9 +8,15 @@ function App() {
   const [query, setQuery] = useState('');
   
   useEffect(() => {
-    axios
+    if(query !=''){
+      axios
       .get(`https://jsonplaceholder.typicode.com/posts?userId=${query}`)
       .then((res) => setPosts(res.data));
+    }else{
+      axios
+      .get(`https://jsonplaceholder.typicode.com/posts`)
+      .then((res) => setPosts(res.data));
+    }
   }, [query]);
 
 
