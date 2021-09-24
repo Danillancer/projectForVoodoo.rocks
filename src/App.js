@@ -18,10 +18,7 @@ function App() {
       .then((res) => setPosts(res.data));
     }
   }, [query]);
-
-
   
-
   useEffect(() => {
     axios
       .get(`https://jsonplaceholder.typicode.com/users`)
